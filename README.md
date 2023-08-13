@@ -1,4 +1,4 @@
 # htdp
 Solutions for HtDP
 
-![Tests](https://github.com/github/docs/actions/workflows/ci.yml/badge.svg)
+[![CI](https://github.com/Rende11/htdp/actions/workflows/ci.yml/badge.svg)](https://github.com/Rende11/htdp/actions/workflows/ci.yml)
