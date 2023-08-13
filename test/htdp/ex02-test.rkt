@@ -6,9 +6,11 @@
 
 (define base-test
   (test-suite
-   "FIX/ME"
+   "Hello world"
    (test-case
-       "FIX/ME"
-     (check-equal? 1 0))))
+       "Equality check"
+     (check-equal? solution "hello_world"))))
 
 (run-tests base-test)
+
+
