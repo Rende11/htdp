@@ -1,0 +1,23 @@
+{:tasks
+ {add-exercise {:doc "Creates base source and test files"
+                :requires ([babashka.fs :as fs])
+                :task (let [[chapter part ex] *command-line-args*
+                            source-code-dir "src/htdp"
+                            source-file-path (format "%s/chapter%s/part%s/ex%s.rkt"
+                                                     source-code-dir chapter part ex)
+                            relative-source-path (format "../../%s" source-file-path)
+
+                            test-dir "test/htdp"
+                            test-file-path (format "%s/ex%s-test.rkt" test-dir ex)
+                            source-template-path "templates/source.tpl.rkt"
+                            test-template-path "templates/test.tpl.rkt"]
+
+                        (fs/copy source-template-path source-file-path)
+                        (shell {:extra-env {"CODE_PATH" relative-source-path}
+                                :out test-file-path}
+                               "bash -c"
+                               (format "envsubst < %s" test-template-path))
+
+                        (println "Done" source-file-path test-file-path))}
+  test {:doc "Run tests"
+        :task (shell "raco test test/")}}}
