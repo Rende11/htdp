@@ -9,6 +9,9 @@
    "String first"
    (test-case
        "Hello"
-     (check-equal? (string-first "hello") "h"))))
+     (check-equal? (string-first "hello") "h"))
+   (test-case
+       "Empty string"
+     (check-equal? (string-first "") ""))))
 
 (run-tests base-test)
