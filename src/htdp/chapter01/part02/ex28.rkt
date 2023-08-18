@@ -21,7 +21,7 @@
 
 ;; (= (profit 1) 511.2)
 ;; (= (profit 2) 937.2)
-;; (= (profit 3) 1063.2) ;; Here the bset
+;; (= (profit 3) 1063.2) ;; Here the best
 ;; (= (profit 4) 889.2)
 ;; (= (profit 5) 415.2)
 
