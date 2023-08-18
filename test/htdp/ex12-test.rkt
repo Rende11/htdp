@@ -9,6 +9,6 @@
    "Cube volume"
    (test-case
        "Edge = 4"
-     (check-equal? (cvolume 4) 16))))
+     (check-equal? (cvolume 4) 64))))
 
 (run-tests base-test)
