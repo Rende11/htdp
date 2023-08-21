@@ -8,7 +8,7 @@
 (define f-name-path "../resources/first-name.dat")
 (define l-name-path "../resources/last-name.dat")
 (define sign-path "../resources/signature.dat")
-(define out-path "../out/letter")
+(define out-path "../letter.output")
 (define check-file-path "../resources/letter.dat")
 
 (define base-test
