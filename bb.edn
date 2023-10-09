@@ -1,5 +1,6 @@
 {:tasks
- {add-exercise {:doc "Creates base source and test files"
+ {add-exercise {:doc "Creates base source and test files.
+                      Ex add-exercise 01 01 1 (Chapter 1, part 1, exercise 1)"
                 :requires ([babashka.fs :as fs])
                 :task (let [[chapter part ex] *command-line-args*
                             source-code-dir "src/htdp"
